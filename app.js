@@ -77,7 +77,7 @@ function sumArray(testArray) {
   var b = testArray[1];
   var c = testArray[2];
   return([(sum(c, sum(a, b)[0])[0]), a + ',' + b + ',' + c + ' was passed in as an array of numbers, and ' + (sum(c, sum(a, b)[0])[0]) + ' is their sum.']);
-  }
+}
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -101,7 +101,7 @@ function multiplyArray() {
   var b = testArray[1];
   var c = testArray[2];
   return([(multiply(a, multiply(b, c)[0])[0]), 'The numbers ' + a + ',' + b + ',' + c + ' have a product of ' + (multiply(a, multiply(b, c)[0])[0]) + '.']);
-  }
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
@@ -125,15 +125,17 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-// var testDynamicArray = [1,2,3,4,5];
+var testDynamicArray = [1,2,3,4,5];
 
-// function multiplyAnyArray(dynamicArray) {
-//   for (var i = 0; i < dynamicArray.length; i ++) {
-//     multiply()[0]
-//   }
-// }
+function multiplyAnyArray() {
+  var multMe = 1;
+  for (var i = 0; i < testDynamicArray.length; i ++) {
+    multMe = multiply(multMe, testDynamicArray[i])[0];
+  }
+  return([multMe, 'The numbers ' + testDynamicArray + ' have a product of ' + multMe + '.']);
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
