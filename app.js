@@ -72,10 +72,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(testArray) {
-  var a = testArray[0];
-  var b = testArray[1];
-  var c = testArray[2];
+function sumArray(array) {
+  var a = array[0];
+  var b = array[1];
+  var c = array[2];
   return([(sum(c, sum(a, b)[0])[0]), a + ',' + b + ',' + c + ' was passed in as an array of numbers, and ' + (sum(c, sum(a, b)[0])[0]) + ' is their sum.']);
 }
 
@@ -96,10 +96,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray() {
-  var a = testArray[0];
-  var b = testArray[1];
-  var c = testArray[2];
+function multiplyArray(array) {
+  var a = array[0];
+  var b = array[1];
+  var c = array[2];
   return([(multiply(a, multiply(b, c)[0])[0]), 'The numbers ' + a + ',' + b + ',' + c + ' have a product of ' + (multiply(a, multiply(b, c)[0])[0]) + '.']);
 }
 
@@ -127,12 +127,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testDynamicArray = [1,2,3,4,5];
 
-function multiplyAnyArray() {
+function multiplyAnyArray(anyArray) {
   var multMe = 1;
-  for (var i = 0; i < testDynamicArray.length; i ++) {
-    multMe = multiply(multMe, testDynamicArray[i])[0];
+  for (var i = 0; i < anyArray.length; i ++) {
+    multMe = multiply(multMe, anyArray[i])[0];
   }
-  return([multMe, 'The numbers ' + testDynamicArray + ' have a product of ' + multMe + '.']);
+  return([multMe, 'The numbers ' + anyArray + ' have a product of ' + multMe + '.']);
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
